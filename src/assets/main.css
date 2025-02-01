@@ -1,0 +1,44 @@
+@import './base.css';
+
+
+#app {
+  width: 100%; 
+  margin: 0 auto;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.background-image {
+  padding: 0 !important
+}
+
+.container {
+  width: 100%; 
+  grid-column: 1 / -1; 
+}
+
+a,
+.gray {
+  text-decoration: none;
+  color: rgb(55, 56, 55);
+  transition: transform 0.4s ease, background-color 0.4s ease; /* Плавный переход для масштаба и фона */
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover,
+  .gray:hover {
+    background-color: hsla(0, 0%, 0%, 0.2);
+    transform: scale(1.1); 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center; 
+  }
+
+  
+}
