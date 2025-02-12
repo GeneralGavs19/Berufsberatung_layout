@@ -31,10 +31,16 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#">Студентам</a>
+                <a class="nav-link" @click="$router.push('/User')">Личный кабинет</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Преподавателям</a>
+                <a class="nav-link" @click="$router.push('СКОРО БУДЕТ')">Преподавателям</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/ForStudent')">Студентам</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/Map')">Карта учебных заведений</a>
               </li>
             </ul>
           </div>
@@ -51,7 +57,7 @@
           Пройдите тест профориентации и <br>
           найдите свое место в жизни
         </p>
-        <button class="btn btn-light btn-lg header-button">
+        <button @click="$router.push('/TestPage')" class="btn btn-light btn-lg header-button">
           <h2>Пройти тест</h2>
         </button>
       </div>
@@ -60,8 +66,8 @@
 
   <main class="container py-5">
   <div class="row align-items-center fade-in" ref="blocks">
-    <div class="col-12 col-md-8  p-4 text-block">
-      <h3>
+      <div class="col-12 col-md-8  p-4 text-block">
+        <h3>
         Тест для профориентации</h3>
       <p>
 
@@ -123,7 +129,7 @@
       <li>Скульптура</li>
       <li>Дизайн</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+    <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
   </div>
 </div>
 
@@ -138,7 +144,8 @@
       <li>Робототехника</li>
       <li>Механика</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -153,7 +160,8 @@
       <li>Биология</li>
       <li>Астрономия</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -168,7 +176,8 @@
       <li>История</li>
       <li>Культурология</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -186,7 +195,8 @@
       <li>Скульптура</li>
       <li>Дизайн</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -201,7 +211,8 @@
       <li>Робототехника</li>
       <li>Механика</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -215,7 +226,8 @@
       <li>Биология</li>
       <li>Астрономия</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -229,7 +241,8 @@
       <li>История</li>
       <li>Культурология</li>
     </ul>
-    <button class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+
   </div>
 </div>
 
@@ -240,10 +253,10 @@
   <div class="Find-university-wrapper">
     <div class="Find-university-text-block">
       <h2>Найди учебное<br> заведение мечты</h2>
-      <p>Подбери подходящую специальность и сделай<br>
-        шаг к своему будущему! Подходящую<br>
-        специальность и сделай шаг к своему будущему!</p>
-        <button class="action-button">
+      <p>Подбери вуз и специальность, <br>
+        исходя из своих интересов и карьерных целей. <br>
+        Мы поможем сделать осознанный выбор!</p>
+        <button   @click="$router.push('/Institution')" class="action-button">
     Смотреть
     <div class="hover-box">
       <img src="@/components/img/Лупа.png" alt="Лупа" class="magnifier-icon">
@@ -323,12 +336,6 @@
 
 
 </div>
-
-
-
-
-
-
   </template>
 
 <script>
@@ -396,7 +403,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-
 }
 
 .container-fluid {
@@ -404,9 +410,11 @@ body {
 }
 
 .navbar {
-  transition: background-color 0.5s ease, box-shadow 0.4s ease;
+  transition: background-color 0.2s ease, box-shadow 10s ease;
 }
-
+.nav-item {
+  margin-left: 10px;
+}
 .navbar-logo {
   font-size: 2rem;
   font-weight: bolder;
@@ -692,6 +700,7 @@ hr {
 .Find-university-text-block {
   grid-column: 2 / 7;
   text-align: center;
+  align-items: center
 }
 
 .Find-university-text-block h2 {
@@ -718,7 +727,7 @@ hr {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .Find-university-text-block .action-button:hover {
@@ -737,24 +746,36 @@ hr {
 
 .action-button {
   position: relative;
-  padding: 10px 20px;
+  width: 100px;
+  height: 50px;
   background-color: #607d8b;
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: all 4s cubic-bezier(0.25, 1, 0.5, 1);
-  display: inline-flex;
+  transition: width 1s ease-in-out, background-color 1s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-left: 35%;
+}
+
+.action-button::after {
+  content: "🔍";
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  margin-left: -25px;
 }
 
 .action-button:hover {
-  padding-right: 80px;
+  width: 170px;
   background-color: #455a64;
 }
+
 
 .hover-box {
   position: absolute;

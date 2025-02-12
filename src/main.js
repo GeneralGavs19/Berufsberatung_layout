@@ -1,15 +1,14 @@
 import './assets/main.css';
 
 import { createApp } from 'vue';
-import MainPage from './components/MainPage.vue';
+import App from './App.vue';
+import router from './router';
 
-// Импорт Bootstrap CSS
+// Импорт Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Импорт Bootstrap Icons CSS
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
-// Импорт Bootstrap JS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-createApp(MainPage).mount('#app');
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
