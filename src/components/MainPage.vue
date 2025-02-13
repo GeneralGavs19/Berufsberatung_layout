@@ -256,7 +256,7 @@
       <p>Подбери вуз и специальность, <br>
         исходя из своих интересов и карьерных целей. <br>
         Мы поможем сделать осознанный выбор!</p>
-        <button   @click="$router.push('/Institution')" class="action-button">
+        <button   @click="$router.push('/Universities')" class="action-button">
     Смотреть
     <div class="hover-box">
       <img src="@/components/img/Лупа.png" alt="Лупа" class="magnifier-icon">
