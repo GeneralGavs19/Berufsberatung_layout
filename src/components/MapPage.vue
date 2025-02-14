@@ -47,10 +47,16 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" @click="$router.push('/ForStudent')"
-                    >Студентам</a
-                  >
-                </li>
+                <d class="nav-link">Студентам
+                  <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/Universities')">Universities</a>
+                <a class="nav-link" @click="$router.push('/Colleges')">Colleges</a>
+                  </li>
+                </d>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/Test')">Профориентационный тест</a>
+              </li>
               </ul>
             </div>
           </div>
@@ -224,7 +230,9 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   transition: background-color 0.3s ease;
 }
-
+.nav-item {
+  margin-left: 10px;
+}
 .page-container {
   height: 100vh;
   width: 100vw;
@@ -298,6 +306,10 @@ export default {
   align-items: flex-start;
 }
 
+.sidebar-nav-filtration {
+  margin-top: 20px;
+}
+
 .sidebar-toggle-button {
   position: fixed;
   left: 410px;
@@ -318,9 +330,7 @@ export default {
 }
 
 
-.sidebar-nav-filtration {
-  margin-top: 20px;
-}
+
 .sidebar-nav-filtration button {
   padding: 8px 15px;
   margin: -5px 10px 10px 0px;

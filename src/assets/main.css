@@ -21,7 +21,7 @@ a,
 .gray {
   text-decoration: none;
   color: rgb(55, 56, 55);
-  transition: transform 0.4s ease, background-color 0.4s ease; /* Плавный переход для масштаба и фона */
+  transition: transform 0.4s ease, background-color 0.4s ease; 
   padding: 3px;
 }
 
@@ -33,7 +33,9 @@ a,
   }
 }
 
-
+.checked {
+  color: orange;
+}
 @media (min-width: 1024px) {
   body {
     display: flex;

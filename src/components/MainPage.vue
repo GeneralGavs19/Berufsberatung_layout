@@ -37,10 +37,19 @@
                 <a class="nav-link" @click="$router.push('СКОРО БУДЕТ')">Преподавателям</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/ForStudent')">Студентам</a>
+                <h class="nav-link">Студентам
+                  <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/Universities')">Universities</a>
+                <a class="nav-link" @click="$router.push('/Colleges')">Colleges</a>
+                  </li>
+                </h>
+
               </li>
               <li class="nav-item">
                 <a class="nav-link" @click="$router.push('/Map')">Карта учебных заведений</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" @click="$router.push('/Test')">Профориентационный тест</a>
               </li>
             </ul>
           </div>
@@ -415,6 +424,7 @@ body {
 .nav-item {
   margin-left: 10px;
 }
+
 .navbar-logo {
   font-size: 2rem;
   font-weight: bolder;
@@ -872,3 +882,4 @@ hr {
     opacity: 0;
   }
 </style>
+
