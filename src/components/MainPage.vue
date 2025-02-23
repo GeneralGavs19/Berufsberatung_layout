@@ -1,61 +1,6 @@
 <template>
   <header>
-    <nav :class="['navbar', isScrolled ? 'bg-body-tertiary' : 'transparent-header', 'fixed-top']">
-      <div class="container-fluid">
-        <a class="navbar-logo" href="#">B|B</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/User')">Личный кабинет</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('СКОРО БУДЕТ')">Преподавателям</a>
-              </li>
-              <li class="nav-item">
-                <h class="nav-link">Студентам
-                  <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Universities')">Universities</a>
-                <a class="nav-link" @click="$router.push('/Colleges')">Colleges</a>
-                  </li>
-                </h>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Map')">Карта учебных заведений</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Test')">Профориентационный тест</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <div class="background-image">
       <div class="background-image-dark-overlay"></div>
@@ -138,7 +83,7 @@
       <li>Скульптура</li>
       <li>Дизайн</li>
     </ul>
-    <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+    <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
   </div>
 </div>
 
@@ -153,7 +98,7 @@
       <li>Робототехника</li>
       <li>Механика</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -169,7 +114,7 @@
       <li>Биология</li>
       <li>Астрономия</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -185,7 +130,7 @@
       <li>История</li>
       <li>Культурология</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -204,7 +149,7 @@
       <li>Скульптура</li>
       <li>Дизайн</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -220,7 +165,7 @@
       <li>Робототехника</li>
       <li>Механика</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -235,7 +180,7 @@
       <li>Биология</li>
       <li>Астрономия</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>
@@ -250,7 +195,7 @@
       <li>История</li>
       <li>Культурология</li>
     </ul>
-        <button @click="$router.push('/Specialties')" class="card-button">Подробнее</button>
+        <button @click="$router.push('/Specialties/Universities/GlobalSpecialties')" class="card-button">Подробнее</button>
 
   </div>
 </div>

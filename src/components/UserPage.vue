@@ -1,73 +1,6 @@
 <template>
   <header class="header fixed-top">
-    <nav
-      :class="[
-        'navbar',
-        isScrolled ? 'bg-body-tertiary' : 'transparent-header',
-      ]"
-    >
-      <div class="container-fluid">
-        <a class="navbar-logo" @click="$router.push('/')">B|B</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/User')"
-                  >Личный кабинет</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('СКОРО БУДЕТ')"
-                  >Преподавателям</a
-                >
-              </li>
-              <li class="nav-item">
-                <d class="nav-link"
-                  >Студентам
-                  <li class="nav-item">
-                    <a class="nav-link" @click="$router.push('/Universities')"
-                      >Universities</a
-                    >
-                    <a class="nav-link" @click="$router.push('/Colleges')"
-                      >Colleges</a
-                    >
-                  </li>
-                </d>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Test')"
-                  >Профориентационный тест</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+
   </header>
 
   <div class="user-container">
@@ -212,7 +145,7 @@
               <p>Student dormitory</p>
               <p class="feature">Yes</p>
             </div>
-            <button type="button" class="university-button">More details</button>
+            <button type="button" class="university-button"   @click="$router.push('/UniversityAbout')">More details</button>
 
           </div>
 
@@ -222,7 +155,7 @@
           <section id="planned events" class="tab-panel">
             <div class="event-card">
               <div class="event-logo">
-                <img src="@/components/img/EventCard.png" class="event-logo-img" />
+                <img src="@/components/img/UnLogo.png" class="event-logo-img" />
                 <img src="@/components/img/Favourite.png" class="event-logo-img" />
               </div>
               <div class="event-view">
@@ -245,13 +178,11 @@
   </div>
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style scoped>
-body {
-  width: 100%;
-  height: 100vw;
-}
+
 .header {
   position: fixed;
   top: 0;
@@ -279,7 +210,7 @@ body {
 .user-background {
   background-color: #495b69;
   width: 100%;
-  height: 14%;
+  height: 10%;
 }
 
 .user-content {
@@ -512,7 +443,13 @@ p {
   margin-left: 40%;
   width: 150px;
   height: 40px;
+transition: transform 0.3s ease;
+
 }
+
+.university-button:hover {
+        transform: scale(1.1);
+    }
 
 .event-card {
   width: 25%;

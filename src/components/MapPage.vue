@@ -1,69 +1,5 @@
 <template>
   <div class="page-container">
-    <header class="header fixed-top">
-      <nav
-        :class="[
-          'navbar',
-          isScrolled ? 'bg-body-tertiary' : 'transparent-header',
-        ]"
-      >
-        <div class="container-fluid">
-          <a class="navbar-logo" @click="$router.push('/')">B|B</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link" @click="$router.push('/User')"
-                    >Личный кабинет</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" @click="$router.push('СКОРО БУДЕТ')"
-                    >Преподавателям</a
-                  >
-                </li>
-                <li class="nav-item">
-                <d class="nav-link">Студентам
-                  <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Universities')">Universities</a>
-                <a class="nav-link" @click="$router.push('/Colleges')">Colleges</a>
-                  </li>
-                </d>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" @click="$router.push('/Test')">Профориентационный тест</a>
-              </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
     <div class="background-image">
       <div class="filter-container">
         <div>
@@ -269,7 +205,7 @@ export default {
   transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   transform: translateX(-415px);
   height: 80%;
-  margin-top: 7%;
+  margin-top: 2%;
   border-radius: 12px;
   margin-left: 3%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
